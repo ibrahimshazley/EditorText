@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EditorTestModelStoreContainer" CdmEntityContainer="EditorTestEntities">
+    <EntitySetMapping Name="EditorText">
+      <EntityTypeMapping TypeName="EditorTestModel.EditorText">
+        <MappingFragment StoreEntitySet="EditorText">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Text" ColumnName="Text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
