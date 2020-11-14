@@ -7,13 +7,12 @@
     <title></title>
     <script src="JS/jquery-1.10.2.min.js"></script>
 </head>
-<body>
-    <form id="form1" runat="server">
+<body oncontextmenu="return false">
         <div>
             <button type="button" onclick=" OpenPdfPage();">Show PDF </button>
         </div>
-         <div id="pdf" >
-            <object width="100%" height="650" type="application/pdf" data="PDF_File/algorithms_4th_edition.pdf#zoom=85&scrollbar=0&toolbar=0&navpanes=0" id="pdf_content" style="pointer-events: none;">
+         <div id="pdf">
+            <object width="100%" height="650" type="application/pdf" data="PDF_File/algorithms_4th_edition.pdf#zoom=85&scrollbar=0&toolbar=0&navpanes=0" id="pdf_content" >
                 <p>Insert your  messageerror here, if the PDF cannot be displayed.</p>
             </object>
         </div>
@@ -21,14 +20,12 @@
             <iframe src="PDF_File/algorithms_4th_edition.pdf#toolbar=0&navpanes=0" style="pointer-events: none;" width="1000" height="1000"></iframe>
         </div>--%>
 
-    </form>
     <script>
         $(document).ready(function () {
-            $(document).bind("contextmenu", function (e) {
-                return false;
-            });
-         //   document.addEventListener('contextmenu', event => event.preventDefault());
+            debugger;
+            $('#pdf_content').children().find('body').remove();
 
+            //$('#pdf_content').contents.find("body").
         });
         function OpenPdfPage() {
             debugger;
